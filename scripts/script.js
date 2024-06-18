@@ -3,10 +3,17 @@ const openButton = document.querySelector(".openButton");
 const sideBarDiv = document.querySelector(".sideBarDiv");
 
 openButton.addEventListener("click", () => {
-  sideBarDiv.classList.toggle("active");
-  if (sideBarDiv.classList.contains("active")) {
-    sideBarDiv.style.display = "block";
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  const currentLeft = parseInt(window.getComputedStyle(sideBarDiv).left, 10);
+  const currentTop = parseInt(window.getComputedStyle(sideBarDiv).top, 10);
+
+  if (currentLeft < screenWidth && currentTop < screenHeight) {
+    sideBarDiv.style.left = screenWidth + "px";
+    sideBarDiv.style.top = screenHeight + "px";
   } else {
-    sideBarDiv.style.display = "none";
+    sideBarDiv.style.left = "0px";
+    sideBarDiv.style.top = "50px";
   }
 });
