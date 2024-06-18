@@ -11,9 +11,32 @@
   align-items: center;
 }
 .openButton {
-  background-color: darkblue;
+  background-color: rgb(105, 105, 178);
   border: none;
   width: 100px;
   color: white;
   height: 40px;
+}
+.sideBarDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100vh;
+  width: 15vw;
+  flex-direction: column;
+  background-color: brown;
+  position: absolute;
+  z-index: 2;
+}
+.sideBarButton {
+  width: 90%;
+  height: 40px;
+  background-color: bisque;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.sideBarButton:hover {
+  background-color: rgb(193, 160, 119);
 }
