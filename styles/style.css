@@ -17,6 +17,8 @@
   color: white;
   height: 40px;
   cursor: pointer;
+  position: absolute;
+  border-radius: 7px;
 }
 .openButton:hover {
   background-color: rgb(67, 67, 148);
@@ -27,15 +29,16 @@
   align-items: center;
   gap: 15px;
   height: 100vh;
-  width: 15vw;
+  width: 300px;
   flex-direction: column;
   background-color: brown;
   position: absolute;
   z-index: 2;
+  transition: left 0.5s ease;
 }
 .sideBarButton {
   width: 90%;
-  height: 40px;
+  height: 7%;
   background-color: bisque;
   border-radius: 10px;
   border: none;

@@ -2,18 +2,14 @@ const firstDiv = document.querySelector(".firstDiv");
 const openButton = document.querySelector(".openButton");
 const sideBarDiv = document.querySelector(".sideBarDiv");
 
+sideBarDiv.style.left = "-300px";
+
 openButton.addEventListener("click", () => {
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-
   const currentLeft = parseInt(window.getComputedStyle(sideBarDiv).left, 10);
-  const currentTop = parseInt(window.getComputedStyle(sideBarDiv).top, 10);
 
-  if (currentLeft < screenWidth && currentTop < screenHeight) {
-    sideBarDiv.style.left = screenWidth + "px";
-    sideBarDiv.style.top = screenHeight + "px";
-  } else {
+  if (currentLeft < 0) {
     sideBarDiv.style.left = "0px";
-    sideBarDiv.style.top = "50px";
+  } else {
+    sideBarDiv.style.left = "-300px";
   }
 });
